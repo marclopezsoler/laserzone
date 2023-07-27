@@ -1,0 +1,230 @@
+@import "../assets/variables.scss";
+
+.landing_page {
+  width: auto;
+  height: auto;
+  background-color: black;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: auto;
+  }
+}
+
+.landing_container {
+  background: url("../assets/landing_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 115vh;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_landing {
+  width: 33%;
+}
+
+.arrow_down {
+  position: absolute;
+  animation: 3s infinite arrowAnimate;
+  transition: 0.25s ease-in-out;
+
+  &:hover {
+    transform: scale(1.075);
+  }
+
+  img {
+    width: 60px;
+  }
+}
+
+@keyframes arrowAnimate {
+  0% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 35px;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+
+.divider_1 {
+  position: relative;
+  bottom: 100px;
+  background-image: url("../assets/separator.svg");
+  background-size: 100% 100px;
+  height: 100px;
+  z-index: 1;
+  transform: scale(1, 1);
+  margin-bottom: -100px;
+}
+
+.divider_2 {
+  position: relative;
+  bottom: 100px;
+  background-image: url("../assets/separator2.svg");
+  background-size: 100% 100px;
+  height: 100px;
+  z-index: 1;
+  transform: scale(1, 1);
+  margin-top: 100px;
+  margin-bottom: -100px;
+}
+
+.tarifas {
+  background-color: $black;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+
+  gap: 25px;
+
+  h2 {
+    color: $pink;
+  }
+
+  .tarifas_content {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+    div {
+      min-height: fit-content;
+      width: 22.5%;
+      border: 3px solid $pink;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0px;
+      padding: 35px 0px 35px 0px;
+      margin: 0;
+
+      h3 {
+        color: $pink;
+        font-size: 50px;
+        font-weight: 800;
+        font-family: "Montserrat", sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+
+      h4 {
+        color: $white;
+        font-size: 26px;
+        padding: 0;
+        margin: 0;
+      }
+
+      h5 {
+        color: $white;
+        font-weight: 500;
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  .discount {
+    background-color: $pink;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    width: 25vw;
+    height: 75px;
+
+    h3 {
+      font-size: 26px;
+      font-weight: 800;
+      font-family: "Montserrat", sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 600;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .reserva_btn_parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 3px solid $pink;
+    width: 25vw;
+    height: 50px;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+
+    .reserva_btn {
+      color: $pink;
+      font-size: 24px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.25s ease-in-out;
+    }
+    .arrow_right {
+      opacity: 0;
+      margin-top: 3.5px;
+      margin-left: -20px;
+      transform: scale(0.25);
+      width: 20px;
+      transition: 0.25s ease-in-out;
+    }
+
+    &:hover {
+      transform: scale(1.033);
+      background-color: $pink;
+
+      .reserva_btn {
+        color: $white;
+      }
+
+      .arrow_right {
+        opacity: 1;
+        margin-left: 5px;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.fiestas {
+  background-color: $pink;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+
+  gap: 25px;
+
+  h2 {
+    color: $white;
+  }
+}
